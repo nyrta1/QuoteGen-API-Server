@@ -1,11 +1,11 @@
 package jsonserver.quotegenapi.models;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
 
-
+@Data
 public class QuoteTag {
     @Id
     private Long id;
-    private String type;
+    private String tagName;
 }

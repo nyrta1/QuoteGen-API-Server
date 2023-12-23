@@ -7,8 +7,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/random")
 public class JSONController {
     private final QuoteService quoteService;
 
@@ -17,7 +19,7 @@ public class JSONController {
         this.quoteService = quoteService;
     }
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<QuoteContent> get() {
         return new ResponseEntity<>(quoteService.get(), HttpStatus.OK);
     }
