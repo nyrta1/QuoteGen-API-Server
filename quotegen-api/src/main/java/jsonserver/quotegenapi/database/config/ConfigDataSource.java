@@ -1,9 +1,12 @@
 package jsonserver.quotegenapi.database.config;
 
+import jsonserver.quotegenapi.models.QuoteContent;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.data.jdbc.repository.QueryMappingConfiguration;
+import org.springframework.data.jdbc.repository.config.DefaultQueryMappingConfiguration;
 import org.springframework.data.jdbc.repository.config.EnableJdbcRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
